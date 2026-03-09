@@ -9,7 +9,11 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 # 데이터베이스 연결
-DATABASE_URL = 'mysql+pymysql://root:your-mysql-password@localhost:3306/summariq'
+DATABASE_URL = os.getenv('DATABASE_URL')
+
+if not DATABASE_URL:
+    raise ValueError('DATABASE_URL environment variable is required.')
+
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 db = SessionLocal()

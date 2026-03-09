@@ -77,7 +77,7 @@ AWS Console에서:
 
 ```bash
 # AWS S3
-AWS_ACCESS_KEY_ID=AKIA...your-key-id
+AWS_ACCESS_KEY_ID=your-access-key-id
 AWS_SECRET_ACCESS_KEY=your-secret-access-key
 AWS_REGION=ap-northeast-2
 AWS_S3_BUCKET=summariq-audio
@@ -333,5 +333,4 @@ else {
 - [ ] Production 환경 변수 설정
 - [ ] S3 버킷 권한 점검
 - [ ] 모니터링 설정 (CloudWatch)
-
 
